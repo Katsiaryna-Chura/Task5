@@ -13,13 +13,14 @@ namespace Task5
         public SortedDictionaryPerformanceMeasurer() : base()
         {
             dictionary = new SortedDictionary<int, int>();
+            CollectionName = "SortedDictionary";
         }
 
         public override void MeasureAddingElement()
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToAdd; i++)
+            for (int i = 0; i < NumbersToAdd; i++)
             {
                 dictionary.Add(i, i);
             }
@@ -31,7 +32,7 @@ namespace Task5
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToDelete; i++)
+            for (int i = 0; i < NumbersToDelete; i++)
             {
                 dictionary.Remove(i);
             }

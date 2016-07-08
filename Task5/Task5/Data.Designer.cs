@@ -22,14 +22,14 @@ namespace Task5 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FileData {
+    internal class Data {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FileData() {
+        internal Data() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Task5 {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Task5.FileData", typeof(FileData).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Task5.Data", typeof(Data).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,47 @@ namespace Task5 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\time_difference.txt.
+        ///   Looks up a localized string similar to 50.
         /// </summary>
-        internal static string Path {
+        internal static string IndexOfNumberToRead {
             get {
-                return ResourceManager.GetString("Path", resourceCulture);
+                return ResourceManager.GetString("IndexOfNumberToRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 10000.
+        /// </summary>
+        internal static string NumbersToAdd {
+            get {
+                return ResourceManager.GetString("NumbersToAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1000.
+        /// </summary>
+        internal static string NumbersToDelete {
+            get {
+                return ResourceManager.GetString("NumbersToDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 125.
+        /// </summary>
+        internal static string NumberToFind {
+            get {
+                return ResourceManager.GetString("NumberToFind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to d:\time_difference.txt.
+        /// </summary>
+        internal static string ResultFilePath {
+            get {
+                return ResourceManager.GetString("ResultFilePath", resourceCulture);
             }
         }
     }

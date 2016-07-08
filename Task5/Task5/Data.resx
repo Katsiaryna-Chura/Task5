@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Path" xml:space="preserve">
-    <value>C:\Users\Katsiaryna_Chura@epam.com\Documents\time_difference.txt</value>
+  <data name="IndexOfNumberToRead" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="NumbersToAdd" xml:space="preserve">
+    <value>10000</value>
+  </data>
+  <data name="NumbersToDelete" xml:space="preserve">
+    <value>1000</value>
+  </data>
+  <data name="NumberToFind" xml:space="preserve">
+    <value>125</value>
+  </data>
+  <data name="ResultFilePath" xml:space="preserve">
+    <value>d:\time_difference.txt</value>
   </data>
 </root>

@@ -13,14 +13,23 @@ namespace Task5
         public TimeSpan DeletingTimespan { get; protected set; }
         public TimeSpan ReadingTimespan { get; protected set; }
         public TimeSpan FindingTimespan { get; protected set; }
-        public int NumberToAdd = 1000;
-        public int NumberToDelete = 100;
-        public int NumberToFind = 125;
-        public int IndexOfElementToRead = 50;
+
+        public int NumbersToAdd { get; protected set; }
+        public int NumbersToDelete { get; protected set; }
+        public int NumberToFind { get; protected set; }
+        public int IndexOfElementToRead { get; protected set; }
+
+        public string CollectionName { get; protected set; }
+
         protected Stopwatch s;
 
         public CollectionPerformanceMeasurer()
         {
+            NumbersToAdd = int.Parse(Data.NumbersToAdd);
+            NumbersToDelete = int.Parse(Data.NumbersToDelete);
+            NumberToFind = int.Parse(Data.NumberToFind);
+            IndexOfElementToRead = int.Parse(Data.IndexOfNumberToRead);
+
             s = new Stopwatch();
         }
 
@@ -31,7 +40,7 @@ namespace Task5
 
         public string GetAllTimespans()
         {
-            return $"{AddingTimespan.TotalMilliseconds:0.0000,7} {DeletingTimespan.TotalMilliseconds:0.0000,7} {ReadingTimespan.TotalMilliseconds:0.0000,7} {FindingTimespan.TotalMilliseconds:0.0000,7}\n";
+            return $"{CollectionName,-20} {AddingTimespan.TotalMilliseconds:0.0000,10} {DeletingTimespan.TotalMilliseconds:0.0000,10} {ReadingTimespan.TotalMilliseconds:0.0000,10} {FindingTimespan.TotalMilliseconds:0.0000,10}\n";
         }
     }
 }

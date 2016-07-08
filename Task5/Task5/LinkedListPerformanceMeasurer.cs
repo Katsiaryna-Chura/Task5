@@ -14,13 +14,14 @@ namespace Task5
         public LinkedListPerformanceMeasurer() : base()
         {
             linkedList = new LinkedList<int>();
+            CollectionName = "LinkedList";
         }
 
         public override void MeasureAddingElement()
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToAdd; i++)
+            for (int i = 0; i < NumbersToAdd; i++)
             {
                 linkedList.AddLast(i);
             }
@@ -32,7 +33,7 @@ namespace Task5
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToDelete; i++)
+            for (int i = 0; i < NumbersToDelete; i++)
             {
                 linkedList.Remove(i);
             }

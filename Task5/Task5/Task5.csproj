@@ -49,13 +49,13 @@
     <Compile Include="ListPerformanceMeasurer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FileData.Designer.cs">
+    <Compile Include="Data.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FileData.resx</DependentUpon>
+      <DependentUpon>Data.resx</DependentUpon>
     </Compile>
     <Compile Include="QueuePerformanceMeasurer.cs" />
-    <Compile Include="ResultWriter.cs" />
+    <Compile Include="PerformanceResultWriter.cs" />
     <Compile Include="SortedDictionaryPerformanceMeasurer.cs" />
     <Compile Include="SortedSetPerformanceMeasurer.cs" />
     <Compile Include="StackPerformanceMeasurer.cs" />
@@ -64,9 +64,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FileData.resx">
+    <EmbeddedResource Include="Data.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FileData.Designer.cs</LastGenOutput>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,13 +13,14 @@ namespace Task5
         public QueuePerformanceMeasurer() : base()
         {
             queue = new Queue<int>();
+            CollectionName = "Queue";
         }
 
         public override void MeasureAddingElement()
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToAdd; i++)
+            for (int i = 0; i < NumbersToAdd; i++)
             {
                 queue.Enqueue(i);
             }
@@ -31,7 +32,7 @@ namespace Task5
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToDelete; i++)
+            for (int i = 0; i < NumbersToDelete; i++)
             {
                 queue.Dequeue();
             }

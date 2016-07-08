@@ -10,7 +10,7 @@ namespace Task5
     {
         static void Main(string[] args)
         {
-            ResultWriter writer = new ResultWriter();
+            PerformanceResultWriter writer = new PerformanceResultWriter();
             writer.CalculateOverallResults();
             writer.WriteResultsToFile();
             Console.WriteLine("Results are written to the file.");

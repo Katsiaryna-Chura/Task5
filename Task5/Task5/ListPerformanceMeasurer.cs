@@ -14,13 +14,14 @@ namespace Task5
         public ListPerformanceMeasurer() : base()
         {
             list = new List<int>();
+            CollectionName = "List";
         }
 
         public override void MeasureAddingElement()
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToAdd; i++)
+            for (int i = 0; i < NumbersToAdd; i++)
             {
                 list.Add(i);
             }
@@ -32,7 +33,7 @@ namespace Task5
         {
             s.Reset();
             s.Start();
-            for (int i = 0; i < NumberToDelete; i++)
+            for (int i = 0; i < NumbersToDelete; i++)
             {
                 list.Remove(i);
             }
