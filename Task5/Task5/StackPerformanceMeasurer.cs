@@ -18,44 +18,44 @@ namespace Task5
 
         public override void MeasureAddingElement()
         {
-            s.Reset();
-            s.Start();
+            stopwatch.Reset();
+            stopwatch.Start();
             for (int i = 0; i < NumbersToAdd; i++)
             {
                 stack.Push(i);
             }
-            s.Stop();
-            this.AddingTimespan = s.Elapsed;
+            stopwatch.Stop();
+            this.AddingTimespan = stopwatch.Elapsed;
         }
 
         public override void MeasureDeletingElement()
         {
-            s.Reset();
-            s.Start();
+            stopwatch.Reset();
+            stopwatch.Start();
             for (int i = 0; i < NumbersToDelete; i++)
             {
                 stack.Pop();
             }
-            s.Stop();
-            this.DeletingTimespan = s.Elapsed;
+            stopwatch.Stop();
+            this.DeletingTimespan = stopwatch.Elapsed;
         }
 
         public override void MeasureFindingElement()
         {
-            s.Reset();
-            s.Start();
+            stopwatch.Reset();
+            stopwatch.Start();
             stack.Contains(this.NumberToFind);
-            s.Stop();
-            this.FindingTimespan = s.Elapsed;
+            stopwatch.Stop();
+            this.FindingTimespan = stopwatch.Elapsed;
         }
 
         public override void MeasureReadingElement()
         {
-            s.Reset();
-            s.Start();
+            stopwatch.Reset();
+            stopwatch.Start();
             stack.ElementAt(this.IndexOfElementToRead);
-            s.Stop();
-            this.ReadingTimespan = s.Elapsed;
+            stopwatch.Stop();
+            this.ReadingTimespan = stopwatch.Elapsed;
         }
     }
 }

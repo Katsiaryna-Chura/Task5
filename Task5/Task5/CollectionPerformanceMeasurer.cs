@@ -21,7 +21,7 @@ namespace Task5
 
         public string CollectionName { get; protected set; }
 
-        protected Stopwatch s;
+        protected Stopwatch stopwatch;
 
         public CollectionPerformanceMeasurer()
         {
@@ -30,7 +30,7 @@ namespace Task5
             NumberToFind = int.Parse(Data.NumberToFind);
             IndexOfElementToRead = int.Parse(Data.IndexOfNumberToRead);
 
-            s = new Stopwatch();
+            stopwatch = new Stopwatch();
         }
 
         public abstract void MeasureAddingElement();

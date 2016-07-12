@@ -10,51 +10,20 @@ namespace Task5
     public class PerformanceResultWriter
     {
         public string FilePath { get; private set; }
-        List<CollectionPerformanceMeasurer> measurers;
-        List<string> results;
+        public List<string> Results{ get; set; }
 
         public PerformanceResultWriter()
         {
             FilePath = Data.ResultFilePath;
-            results = new List<string>();
-            measurers = new List<CollectionPerformanceMeasurer>();
-        }
-
-        public void MeasurersInitialize()
-        {
-            measurers.Add(new ListPerformanceMeasurer());
-            measurers.Add(new LinkedListPerformanceMeasurer());
-            measurers.Add(new DictionaryPerformanceMeasurer());
-            measurers.Add(new QueuePerformanceMeasurer());
-            measurers.Add(new StackPerformanceMeasurer());
-            measurers.Add(new SortedSetPerformanceMeasurer());
-            measurers.Add(new SortedDictionaryPerformanceMeasurer());
+            Results = new List<string>();
         }
 
         public void WriteResultsToFile()
         {
             File.WriteAllText(FilePath, $"{"Operation",-20} {"Add",8} {"Delete",8} {"Read",8} {"Find",8}\n\n");
-            foreach (var result in results)
+            foreach (var result in Results)
             {
                 File.AppendAllText(FilePath, result);
-            }
-        }
-
-        public string CalculateResultsForCollection(CollectionPerformanceMeasurer measurer)
-        {
-            measurer.MeasureAddingElement();
-            measurer.MeasureDeletingElement();
-            measurer.MeasureReadingElement();
-            measurer.MeasureFindingElement();
-            return measurer.GetAllTimespans();
-        }
-
-        public void CalculateOverallResults()
-        {
-            MeasurersInitialize();
-            foreach (var measurer in measurers)
-            {
-                results.Add($"{CalculateResultsForCollection(measurer)}");
             }
         }
     }

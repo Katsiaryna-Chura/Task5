@@ -97,7 +97,7 @@ namespace Task5 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to d:\time_difference.txt.
+        ///   Looks up a localized string similar to C:\Users\Katsiaryna_Chura@epam.com\Documents\time_difference.txt.
         /// </summary>
         internal static string ResultFilePath {
             get {
